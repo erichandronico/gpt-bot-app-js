@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBot IA - UDA</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.2/axios.min.js" integrity="sha512-b94Z6431JyXY14iSXwgzeZurHHRNkLt9d6bAHt7BZT38eqV+GyngIi/tVye4jBKPYQ2lBdRs0glww4fmpuLRwA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" referrerpolicy="no-referrer"></script>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class='flex flex-col h-screen'> 
+
+        <!-- Título -->
+        <div class='fixed top-0 left-0 right-0 p-5 z-10 bg-gray-900'>
+            <div class='max-w-4xl mx-auto'>
+                <h1 class='flex items-center gap-5 font-bold text-white'>ChatBot IA - UDA</h1>
+            </div>
+        </div>
+
+        <!-- Botones de acción -->
+        <div class='mt-20 mb-5 px-2 text-right space-x-4'>
+            <button id="refreshButton" class="bg-gray-700 hover:bg-gray-400 hover:text-gray-800 text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                Refrescar
+            </button>
+            <button id="deleteButton" class="bg-gray-700 hover:bg-gray-400 hover:text-gray-800 text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                Borrar
+            </button>
+        </div>
+
+        <!-- Historial de Mensajes -->
+        <ul id='messagesList' class='overflow-auto px-5 text-left'>
+            <!-- Los mensajes se añadirán aquí dinámicamente -->
+        </ul>
+
+        <!-- Parte Inferior: Formulario de preguntas -->
+        <div class='fixed bottom-0 left-0 right-0 p-5 z-10 bg-gray-900'>
+            <div class='max-w-6xl mx-auto flex items-center gap-4'>
+                <textarea id="messageArea" rows="2" class='w-full'></textarea>
+                <button id="sendButton" class="bg-gray-700 hover:bg-gray-400 hover:text-gray-800 text-gray-200 font-semibold py-2 px-4 border border-gray-400 rounded shadow">
+                    Preguntar al Bot
+                </button>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
